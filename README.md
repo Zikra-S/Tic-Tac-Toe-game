@@ -1,32 +1,50 @@
-# React + TypeScript + Vite
+# Tic-Tac-Toe
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive Tic-Tac-Toe game built with React and TypeScript, based on the [official React tutorial](https://react.dev/learn/tutorial-tic-tac-toe) — extended with custom dark-theme styling, move history, and a reset feature.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A classic Tic-Tac-Toe game where two players take turns marking X and O on a 3x3 grid. The game detects a winner automatically, keeps a full history of moves, and lets players jump back to any previous state of the board.
 
-## Expanding the Oxlint configuration
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Features
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+- Players alternate turns automatically (X always goes first)
+- Automatic winner detection across all rows, columns, and diagonals
+- Clicking a filled square or playing after a win is blocked
+- Full move history with the ability to jump back to any previous move
+- "New Game" button to reset the board
+- Dark theme with bold, high-contrast styling for X and O
+- Built with strict TypeScript typing throughout
+
+## Tech Stack
+
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+
+
+## Project Structure
+
+```
+src/
+├── App.tsx     # Square, Board, and Game components, game logic, and styling
+├── index.css   # Tailwind import and global styles
+├── main.tsx    # App entry point
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## What I Learned
+
+This project was built by following and extending the official React tutorial, which helped reinforce:
+
+- Managing state with `useState` across multiple components
+- Lifting state up from a child component (`Board`) to a parent (`Game`)
+- Passing data and behavior down via props (`squares`, `xIsNext`, `onPlay`)
+- Updating arrays immutably with `slice()` and the spread operator
+- Deriving values from state instead of storing redundant state (e.g. `xIsNext` from `currentMove`)
+- Writing a pure function (`calculateWinner`) to keep game logic separate from UI
+- Adding TypeScript types to component props and function parameters
+- Styling with Tailwind CSS to build a custom visual theme
