@@ -8,7 +8,7 @@ A classic Tic-Tac-Toe game where two players take turns marking X and O on a 3x3
 
 ## Screenshot
 
-![Tic-Tac-Toe preview](./Preview.png)
+![Tic-Tac-Toe preview](./Preview.jpg)
 
 ## Features
 
