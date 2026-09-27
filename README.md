@@ -6,7 +6,7 @@ An interactive Tic-Tac-Toe game built with React and TypeScript, based on the [o
 
 A classic Tic-Tac-Toe game where two players take turns marking X and O on a 3x3 grid. The game detects a winner automatically, keeps a full history of moves, and lets players jump back to any previous state of the board.
 
-## Screenshot
+## Preview
 
 ![Tic-Tac-Toe preview](./Preview.png)
 
