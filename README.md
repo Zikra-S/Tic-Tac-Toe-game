@@ -10,6 +10,10 @@ A classic Tic-Tac-Toe game where two players take turns marking X and O on a 3x3
 
 ![Tic-Tac-Toe preview](./Preview.png)
 
+## Live Demo
+
+[View live site](https://tic-tac-toe-game-sable-gamma.vercel.app/)
+
 ## Features
 
 - Players alternate turns automatically (X always goes first)
